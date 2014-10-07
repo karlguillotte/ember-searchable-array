@@ -1,5 +1,6 @@
 {
   "name": "ember-searchable-array",
+  "description": "Array Proxy Mixin to facilitate text search using Sifter.",
   "version": "0.0.1",
   "private": true,
   "directories": {

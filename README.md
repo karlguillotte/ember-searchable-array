@@ -1,5 +1,7 @@
 # Ember-cli-array-searchable
 
+Array Proxy Mixin to facilitate text search using Sifter.
+
 This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
