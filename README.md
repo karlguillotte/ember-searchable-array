@@ -1,4 +1,4 @@
-# Ember-cli-array-searchable
+# Ember Searchable Array
 
 Array Proxy Mixin to facilitate text search using Sifter.
 
