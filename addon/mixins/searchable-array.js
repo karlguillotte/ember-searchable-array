@@ -3,7 +3,6 @@ import Ember from 'ember';
 var getProperties = Ember.getProperties;
 var setProperties = Ember.setProperties;
 var get = Ember.get;
-var throttle = Ember.run.throttle;
 var computed = Ember.computed;
 
 export default Ember.Mixin.create({

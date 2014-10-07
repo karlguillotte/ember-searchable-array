@@ -1,7 +1,9 @@
 import Ember from 'ember';
 
+var m = window.moment;
+
 function timeAgo(value) {
-  return moment(value).fromNow();
+  return m(value).fromNow();
 }
 
 export {
