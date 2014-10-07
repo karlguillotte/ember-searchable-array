@@ -1,6 +1,6 @@
 {
-  "name": "dummy",
-  "version": "0.0.0",
+  "name": "ember-searchable-array",
+  "version": "0.0.1",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -11,28 +11,34 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "https://github.com/stefanpenner/ember-cli",
+  "repository": "https://github.com/karlguillotte/ember-cli-searchable-array",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Karl Guillotte",
   "license": "MIT",
   "devDependencies": {
     "body-parser": "^1.2.0",
     "broccoli-asset-rev": "0.1.1",
     "broccoli-ember-hbs-template-compiler": "^1.6.1",
     "ember-cli": "0.0.46",
+    "ember-cli-bootstrap": "0.0.12",
     "ember-cli-ic-ajax": "0.1.1",
     "ember-cli-inject-live-reload": "^1.0.2",
     "ember-cli-qunit": "0.1.0",
-    "ember-data": "1.0.0-beta.10",
     "express": "^4.8.5",
     "glob": "^4.0.5"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "sifter",
+    "search",
+    "array"
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "dependencies": {
+    "ember-moment": "^0.1.0"
   }
 }

@@ -3,7 +3,7 @@
   "dependencies": {
     "handlebars": "~1.3.0",
     "jquery": "^1.11.1",
-    "ember": "1.7.0",
+    "ember": "components/ember#beta",
     "ember-data": "1.0.0-beta.10",
     "ember-resolver": "~0.1.7",
     "loader": "stefanpenner/loader.js#1.0.1",
@@ -12,6 +12,14 @@
     "ember-load-initializers": "stefanpenner/ember-load-initializers#0.0.2",
     "ember-qunit": "0.1.8",
     "ember-qunit-notifications": "0.0.4",
-    "qunit": "~1.15.0"
+    "qunit": "~1.15.0",
+    "momentjs": "^2.8.3",
+    "moment": "~2.8.3"
+  },
+  "resolutions": {
+    "ember": "beta"
+  },
+  "devDependencies": {
+    "sifter": "~0.3.4"
   }
 }

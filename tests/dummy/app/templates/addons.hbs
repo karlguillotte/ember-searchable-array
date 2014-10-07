@@ -1,0 +1,36 @@
+<form {{action "search" on="submit"}} role="form">
+	<div class="form-group has-feedback">
+		<label class="control-label sr-only" for="input-search">Search Term</label>
+		{{input value=term type="search" id="input-search" autofocus="autofocus" placeholder="Search Ember addons" classNames="form-control" }}
+		{{#if term}}
+			<button {{action "clear"}} type="button" class="close form-control-feedback">
+				<span aria-hidden="true">&times;</span>
+				<span class="sr-only">Clear</span>
+			</button>
+		{{/if}}
+		<span class="help-block text-right">
+			{{#if searchResult}}
+				{{searchedContent.length}} of {{length}} addons found
+			{{else}}
+				Showing all {{length}} addons. 
+			{{/if}}
+		</span>
+	</div>
+</form>
+{{#each addon in searchedContent}}
+	<div class="media">
+		<a class="pull-left" href={{unbound addon.repository.url}}>
+			<img class="media-object" src="{{unbound addon._npmUser.gravatar}}" alt="{{unbound addon.author.name}}" title="{{unbound addon.author.name}}">
+		</a>
+		<div class="media-body">
+			<a href={{unbound addon.homepage.url}}>
+				<h4 class="media-heading">{{addon.name}}</h4>
+			</a>
+			<p>{{unbound addon.description}}</p>
+			<small>Modified: {{unbound time-ago addon.time.modified}}</small><br>
+			<small>Downloads: {{unbound addon.downloads.downloads}} / month</small>
+		</div>	
+	</div>
+{{else}}
+	<p class="text-center">No addons found.</p>
+{{/each}}

@@ -1,3 +1,8 @@
 module.exports = {
-  name: 'ember-cli-array-searchable'
+  	name: 'ember-searchable-array',
+	included: function(app) {
+		this._super.included(app);
+
+		app.import(app.bowerDirectory + '/sifter/sifter.js');
+	}  
 };
