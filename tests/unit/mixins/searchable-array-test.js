@@ -49,8 +49,7 @@ test('A searchable array', function() {
 	ok(searchableArray.get('searchedContent'), 'has a searched content');
 	equal(searchableArray.get('searchTerm'), null, 'has a search term of null by default');
 	equal(searchableArray.get('searchResult'), null, 'has a search result of null by default');
-	ok(Ember.isArray(searchableArray.get('searchProperties')) , 'has an search properties array by default');
-	equal(searchableArray.get('searchProperties.length'), 0, 'has an empty search properties array by default');
+	equal(searchableArray.get('searchProperties'), undefined, 'has an search properties undefined by default');
 	equal(searchableArray.get('length'), 4, 'has a content length equals to 4');
 });
 
