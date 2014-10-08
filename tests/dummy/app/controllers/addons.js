@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import SearchableArray from 'ember-cli-searchable-array/mixins/searchable-array';
+import SearchableArray from 'ember-searchable-array/mixins/searchable-array';
 
 var debounce = Ember.run.debounce;
 
