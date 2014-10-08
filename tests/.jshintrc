@@ -39,8 +39,6 @@
     "findWithAssert",
     "wait",
     "DS",
-    "Sifter",
-    "keyEvent",
     "isolatedContainer",
     "startApp",
     "andThen",
