@@ -3,12 +3,13 @@ import Ember from 'ember';
 var getProperties = Ember.getProperties;
 var setProperties = Ember.setProperties;
 var get = Ember.get;
+var required = Ember.required;
 var computed = Ember.computed;
 
 export default Ember.Mixin.create({
 	concatenatedProperties: ['searchProperties'],
-	searchProperties: null,
-	searchTerm: null,
+	searchProperties: required(Array),
+	searchTerm: required(String),
 	searchableContent: computed.any('arrangedContent', 'content'),
 	searchedContent: computed.oneWay('searchableContent'),
 	searchResult: null,
@@ -19,16 +20,17 @@ export default Ember.Mixin.create({
 	}.property('searchProperties.[]'),
 	search: function() {
 		var content = get(this, 'searchableContent');
-		var sifter = get(this, '_sifter');
 		var searchTerm = get(this, 'searchTerm');
-		var options = get(this, 'searchOptions');
+		var options;
+		var strategy;
 		var indexes;
 		var result = null;
 
 		if (searchTerm) {
-			result = sifter.search(searchTerm, options);
+			strategy = get(this, 'strategy');
+			options = get(this, 'searchOptions');
+			result = strategy.search(searchTerm, options);
 			indexes = result.items.getEach('id');
-
 			content = content.objectsAt(indexes);
 		}
 
@@ -36,8 +38,8 @@ export default Ember.Mixin.create({
 			searchResult: result,
 			searchedContent: content
 		});
-	}.observes('searchTerm', '_sifter', 'searchOptions'),
-	_sifter: function() {
+	}.observes('searchTerm', 'strategy', 'searchOptions'),
+	strategy: function() {
 		var properties = get(this, 'searchProperties');
 		var content = get(this, 'searchableContent');
 		var data = content.map(function(object) {

@@ -6,7 +6,7 @@ var debounce = Ember.run.debounce;
 export default Ember.ArrayController.extend(SearchableArray, {
 	queryParams: ['term'],
 	term: '',
-	searchProperties: ['name'],
+	searchProperties: ['name', 'description'],
 	setSearchTerm: function() {
 		debounce(this, 'set', 'searchTerm', this.get('term'), 150);
 	}.observes('term'),
