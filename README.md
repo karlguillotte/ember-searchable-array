@@ -1,6 +1,6 @@
 # Ember Searchable Array
 
-This Ember addon provides a Mixin to facilitate text search using [Sifter](https://github.com/brianreavis/sifter.js) in array proxies. A dummy application has been created to showcase this Mixin. It can ba added to any `Ember.ArrayProxy` or `Ember.ArrayController` to enable search on it. 
+This Ember addon provides a Mixin to facilitate text search using [Sifter](https://github.com/brianreavis/sifter.js) in array proxies. It can be added to any `Ember.ArrayProxy` or `Ember.ArrayController` to enable search on it. A dummy application has been created to showcase this Mixin. See Running section for more details. 
 
 This README outlines the details of using and collaborating on this Ember addon. 
 
